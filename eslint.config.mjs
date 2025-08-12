@@ -84,7 +84,7 @@ const eslintConfig = [
               utility: true,
             },
             utils: {
-              utilities: true,
+              utilities: false,
             },
             val: {
               value: true,
@@ -93,7 +93,6 @@ const eslintConfig = [
               variable: true,
             },
             vars: {
-
               variables: true,
             },
           },
