@@ -93,7 +93,6 @@ const eslintConfig = [
               variable: true,
             },
             vars: {
-
               variables: true,
             },
           },
