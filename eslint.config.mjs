@@ -1,3 +1,4 @@
+import { FlatCompat } from "@eslint/eslintrc";
 import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
 import nextTypescript from "eslint-config-next/typescript";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
@@ -7,7 +8,11 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, ...compat.config({
+const compact = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
+const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, ...compact.config({
   rules: {
     "no-console": "error",
     "no-unused-vars": "error",
